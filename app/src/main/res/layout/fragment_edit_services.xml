@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+            <FrameLayout
+                android:id="@+id/frameStartKm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_dis" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:id="@+id/inputLayoutStartKm"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="60dp"
+                        android:paddingTop="4dp">
+
+                        <EditText
+                            android:id="@+id/editTextStartKm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:hint="@string/distance_start"
+                            android:inputType="number"
+                            android:textColor="@color/colorTextHead" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="26dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp"
+                        android:text="@string/kilometer"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/frameStartPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frameStartKm">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_money" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/inputLayoutStartPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="60dp"
+                        android:paddingTop="4dp">
+
+                        <EditText
+                            android:id="@+id/editTextStartPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:hint="@string/service_charge_start"
+                            android:inputType="number"
+                            android:textColor="@color/colorTextHead" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="26dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp"
+                        android:text="@string/baht"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameRatePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameStartPrice">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_coins" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:id="@+id/inputLayoutRatePrice"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="60dp"
+                        android:paddingTop="4dp">
+
+                        <EditText
+                            android:id="@+id/editTextRatePrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:hint="@string/service_charge_rate"
+                            android:inputType="number"
+                            android:textColor="@color/colorTextHead" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="26dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp"
+                        android:text="@string/baht_km"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameRatePrice"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_driver" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/cbLiftStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="@string/driver_lift"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextLiftPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:inputType="number"
+                        android:maxLength="4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="26dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp"
+                        android:text="@string/baht"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLiftPlus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameLift"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_lift" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/cbLiftPlusStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="@string/assist_lift"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextLiftPlusPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:inputType="number"
+                        android:maxLength="4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="26dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp"
+                        android:text="@string/baht"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameLiftPlus"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_cart" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/cbCartStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="@string/cart"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCartPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:inputType="number"
+                        android:maxLength="4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="26dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp"
+                        android:text="@string/baht"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/frameCart"
+                android:layout_marginTop="24dp"
+                android:background="#d4d4d4" />
+
+            <FrameLayout
+                android:id="@+id/frameLayoutPasswordOld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:contentDescription="@string/password"
+                    android:src="@drawable/ic_password" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputLayoutPasswordOld"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="26dp"
+                    android:paddingStart="60dp"
+                    android:paddingTop="4dp"
+                    app:passwordToggleEnabled="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextPasswordOld"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/confirm_password_old"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:textColor="@color/colorTextHead" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </FrameLayout>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/frameLayoutPasswordOld"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="10dp"
+                android:paddingEnd="60dp"
+                android:paddingStart="50dp"
+                android:paddingTop="10dp"
+                fancy:fb_defaultColor="@color/newColorGreenNormal"
+                fancy:fb_focusColor="@color/newColorGreenPress"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="บันทึกข้อมูล"
+                fancy:fb_textColor="#FFFFFF"
+                fancy:fb_textSize="16sp" />
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>

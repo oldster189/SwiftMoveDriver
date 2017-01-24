@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oldster.swiftmovedriver">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- INTERNET ดาวน์โหลดแผนที่จาก Server -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- ACCESS_WIFI_STATE ตรวจสอบสถานะการเชื่อมต่อของ WIFi ก่อนจะดาวน์โหลดแผนที่ -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- ACCESS_FINE_LOCATION ใช้ GPS เพื่อหาตำแหน่งของผู้ใช้ให้แม่นยำที่สุดเท่าที่ทำได้ -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- ACCESS_NETWORK_STATE ตรวจสอบสถานะการเชื่อมต่อของ Cellular Data ก่อนจะดาวน์โหลดแผนที่ -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- WRITE_EXTERNAL_STORAGE เพื่อทำ Cache สำหรับข้อมูลแผนที่ -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.DetailJobActivity" />
+        <activity android:name=".activity.MapActivity" />
+        <activity android:name=".activity.ProcessJobActivity" />
+        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".activity.HistoryJobActivity" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4ac487c14d52223bb3ecfaeea4fbf763e21814ee" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDMKOzST1X3ib-bxEZfE6hqhW_L3pAZ5-k" />
+
+        <activity android:name=".activity.ForgotPasswordActivity" />
+        <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.AccountActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- Firebase Notifications -->
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+        <receiver android:name=".manager.MyReceiver">
+            <intent-filter>
+                <action android:name="OPEN_NEW_ACTIVITY"></action>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.CommentActivity"></activity>
+    </application>
+
+</manifest>

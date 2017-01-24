@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#37a8f4</color>
+    <color name="colorPrimaryDark">#2c8cc9</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorDetail">#3eb24f</color>
+    <color name="colorAccept">#c83eb24f</color>
+    <color name="colorGreenBlue">#4A887E</color>
+    <color name="colorGreenBlueDark">#204944</color>
+
+
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+
+    <!--Modify Color Application  -->
+
+    <color name="colorRed">#E53935</color>
+    <color name="newColorBlueNormal">#01aff1</color>
+    <color name="newColorBluePress">#9cc6f7</color>
+    <color name="newColorGreenNormal">#4dbc5e</color>
+    <color name="newColorGreenPress">#75ce82</color>
+
+    <color name="newColorWhiteNormal">#ffffff</color>
+    <color name="newColorWhitePress">#ececec</color>
+    <color name="newColorWhiteGrayNormal">#f7f8fa</color>
+    <color name="newColorWhiteGrayPress">#e7e7e7</color>
+    <color name="newColorGrayD4">#BDBDBD</color>
+    <color name="colorTextHead">#212121</color>
+    <color name="colorTextSubHead">#757575</color>
+    <color name="colorTitle">#2b2b2b</color>
+
+    <color name="colorBackground">#e9ebee</color>
+    <color name="colorBittersweet">#f96865</color>
+    <color name="colorOrangeNormal">#F98E6E</color>
+    <color name="colorOrangePress">#f7a288</color>
+    <color name="colorIrisBlue">#03AAE5</color>
+    <color name="colorSilverTree">#71C38E</color>
+    <color name="colorStack">#868C87</color>
+    <color name="colorAthensGrey">#D3DDDE</color>
+</resources>

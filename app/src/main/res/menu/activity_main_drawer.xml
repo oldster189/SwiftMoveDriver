@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_inbox"
+            android:title="@string/job" />
+        <item
+            android:id="@+id/nav_process_job"
+            android:icon="@drawable/ic_process"
+            android:title="@string/job_process" />
+
+        <item
+            android:id="@+id/nav_list_job"
+            android:icon="@drawable/ic_history"
+            android:title="@string/job_history" />
+        <item
+            android:id="@+id/nav_comment"
+            android:icon="@drawable/ic_process"
+            android:title="@string/comment" />
+    </group>
+    <item android:title="@string/other">
+        <menu>
+            <item
+                android:id="@+id/nav_account"
+                android:icon="@drawable/ic_edit"
+                android:title="@string/manage_account" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/logout" />
+        </menu>
+
+    </item>
+
+
+
+</menu>

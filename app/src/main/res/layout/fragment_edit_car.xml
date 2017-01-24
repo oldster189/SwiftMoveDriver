@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <FrameLayout
+                android:id="@+id/frameTypeCar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_car" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="46dp"
+                        android:text="@string/type_car"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerTypeCar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameTypeCar">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_brand" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputLayoutBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="26dp"
+                    android:paddingStart="60dp"
+                    android:paddingTop="4dp">
+
+                    <EditText
+                        android:id="@+id/editTextBrand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/brand_car"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textColor="@color/colorTextHead" />
+
+                </android.support.design.widget.TextInputLayout>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/frameModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameBrand">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_md" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputLayoutModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="26dp"
+                    android:paddingStart="60dp"
+                    android:paddingTop="4dp">
+
+                    <EditText
+                        android:id="@+id/editTextModel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/model_car"
+                        android:inputType="text"
+                        android:textColor="@color/colorTextHead" />
+
+                </android.support.design.widget.TextInputLayout>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/frameColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frameModel">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_color" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputLayoutColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="26dp"
+                    android:paddingStart="60dp"
+                    android:paddingTop="4dp">
+
+                    <EditText
+                        android:id="@+id/editTextColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/color_car"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textColor="@color/colorTextHead" />
+
+                </android.support.design.widget.TextInputLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/framePlateProvince"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameColor"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="24dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_flag" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="46dp"
+                        android:text="@string/plate_province"
+                        android:textColor="@color/colorTextHead"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerProvince"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/framePlateCar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/framePlateProvince"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_plate" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputLayoutPlateCar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="26dp"
+                    android:paddingStart="60dp"
+                    android:paddingTop="4dp">
+
+                    <EditText
+                        android:id="@+id/editTextPlateCar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/plate_car"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textColor="@color/colorTextHead" />
+
+                </android.support.design.widget.TextInputLayout>
+            </FrameLayout>
+
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/framePlateCar"
+                android:layout_marginTop="24dp"
+                android:background="#d4d4d4" />
+
+            <FrameLayout
+                android:id="@+id/frameLayoutPasswordRe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="26dp"
+                    android:contentDescription="@string/password"
+                    android:src="@drawable/ic_password" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputLayoutPasswordOld"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="26dp"
+                    android:paddingStart="60dp"
+                    android:paddingTop="4dp"
+                    app:passwordToggleEnabled="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextPasswordOld"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/confirm_password_old"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:textColor="@color/colorTextHead" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </FrameLayout>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/frameLayoutPasswordRe"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="10dp"
+                android:paddingEnd="60dp"
+                android:paddingStart="50dp"
+                android:paddingTop="10dp"
+                fancy:fb_defaultColor="@color/newColorGreenNormal"
+                fancy:fb_focusColor="@color/newColorGreenPress"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="บันทึกข้อมูล"
+                fancy:fb_textColor="#FFFFFF"
+                fancy:fb_textSize="16sp" />
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>
